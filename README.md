@@ -40,6 +40,8 @@ We implemented two deep learning models using transfer learning with TensorFlow/
     
     Saved trained model weights as: Model Weights/best_resnet50.pth
 
+We have used the help of OPENAI(ChatGPT) for some insights.
+
 ## Model Training
 Both models were trained using:
 
