@@ -40,6 +40,15 @@ We implemented two deep learning models using transfer learning with TensorFlow/
     
     Saved trained model weights as: Model Weights/best_resnet50.pth
 
+### Attention-Guided Model
+    Integrates CBAM (Convolutional Block Attention Module)
+
+    Learns what features are important (Channel Attention)
+
+    Learns where to focus (Spatial Attention)
+
+    Improves robustness + explainability
+
 We have used the help of OPENAI(ChatGPT) for some insights.
 
 ## Model Training
@@ -76,7 +85,30 @@ Each model was evaluated on the test dataset to measure real-world performance. 
     F1-score
     
     ROC-AUC
+    
+## Trustworthiness Evaluation
+We evaluated the model on the following axes:
 
+### Robustness
+Model performance under:
+
+    Gaussian Noise
+
+    Blur
+
+    Brightness Variation
+
+    Rotation
+
+### Explainability
+Using Grad-CAM and Central Focus Score:
+
+    Measures heatmap concentration inside lung region
+
+    Detects whether model focuses on medically relevant regions
+
+    AG-Net shows improved attention maps
+    
 ## Model Testing
 To demonstrate real-world usability, we built a testing notebook (03_model_testing.ipynb) that:
 
@@ -122,3 +154,5 @@ Training metrics for each model are stored in the metrics/ directory:
 4. ROC-AUC Curve
 
 Each notebook automatically generates and saves these plots.
+
+The trustworthiness metric plots are stored under the file named Trustworthiness Metrics.
