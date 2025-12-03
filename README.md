@@ -154,3 +154,5 @@ Training metrics for each model are stored in the metrics/ directory:
 4. ROC-AUC Curve
 
 Each notebook automatically generates and saves these plots.
+
+The trustworthiness metric plots are stored under the file named Trustworthiness Metrics.
